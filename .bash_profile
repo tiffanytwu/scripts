@@ -42,3 +42,5 @@ BRANCH="${COLOR_YELLOW} $(__git_ps1 " (%s)") ${END_COLOR}"
 SYMBOL="\n\[${COLOR_LIGHT_GREEN}\]→ \[${COLOR_NC}\]"
 
 PS1=$TIME$HOST$LOCATION$BRANCH$SYMBOL
+if [[ "$VIRTUAL_ENV" != "" ]]; then PS1="(`basename \"$VIRTUAL_ENV\"`) $PS1"; fi
+
